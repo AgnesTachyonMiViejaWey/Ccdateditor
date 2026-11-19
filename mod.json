@@ -1,0 +1,19 @@
+{
+	"geode": "6.0.0-alpha.2",
+	"gd": {
+		"win": "2.2091",
+		"android": "2.2091",
+		"mac": "2.2091",
+		"ios": "2.2091"
+	},
+	"id": "claude.restore-stats",
+	"name": "Restore Stats",
+	"version": "v1.0.0",
+	"developer": "Claude",
+	"description": "Pone orbes, diamantes y llaves de demonio con un boton en el menu principal.",
+	"settings": {
+		"orbs": { "type": "int", "name": "Mana Orbs", "default": 666777888 },
+		"diamonds": { "type": "int", "name": "Diamantes", "default": 11300000 },
+		"keys": { "type": "int", "name": "Llaves de demonio", "default": 181818181 }
+	}
+}
