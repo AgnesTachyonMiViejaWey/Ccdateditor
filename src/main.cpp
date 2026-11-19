@@ -8,11 +8,13 @@ static void applyStats() {
 	int orbs = (int)Mod::get()->getSettingValue<int64_t>("orbs");
 	int diamonds = (int)Mod::get()->getSettingValue<int64_t>("diamonds");
 	int keys = (int)Mod::get()->getSettingValue<int64_t>("keys");
+	int mini = (int)Mod::get()->getSettingValue<int64_t>("minidiamonds");
 
 	gsm->setStat("14", orbs);      // Mana Orbs
 	gsm->setStat("22", orbs);      // Total Orbs
 	gsm->setStat("13", diamonds);  // Diamantes
 	gsm->setStat("21", keys);      // Llaves de demonio
+	gsm->setStat("29", mini);      // Mini diamantes
 }
 
 class $modify(RSMenuLayer, MenuLayer) {
@@ -38,8 +40,8 @@ class $modify(RSMenuLayer, MenuLayer) {
 		FLAlertLayer::create(
 			"Listo",
 			fmt::format(
-				"Orbes: <cg>{}</c>\nDiamantes: <cg>{}</c>\nLlaves: <cg>{}</c>\n\nMinimiza el juego para que se guarde.",
-				gsm->getStat("14"), gsm->getStat("13"), gsm->getStat("21")
+				"Orbes: <cg>{}</c>\nDiamantes: <cg>{}</c>\nLlaves: <cg>{}</c>\nMini diamantes: <cg>{}</c>\n\nMinimiza el juego para que se guarde.",
+				gsm->getStat("14"), gsm->getStat("13"), gsm->getStat("21"), gsm->getStat("29")
 			),
 			"OK"
 		)->show();
